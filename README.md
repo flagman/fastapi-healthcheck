@@ -1,4 +1,4 @@
-# FastApi Healthcheck package
+# FastAPI Healthcheck package
 ```python 
 import fastapi_healthcheck
 app = FastAPI(...)
