@@ -1,6 +1,6 @@
-# Healthcheck package
+# FASTApi Healthcheck package
 ```python 
-import healthcheck
+import fastapi_healthcheck
 app = FastAPI(...)
 
 class WorkerChecker(healthcheck.base.Base):    
@@ -10,7 +10,7 @@ class WorkerChecker(healthcheck.base.Base):
         time_passed_for_check = 1.0
         return {"name": self.name, "status": status, "optional": self.optional, "time": time_passed_for_check}
 
-healthcheck.add_health_route(app, name="Super-Resolution", checkers=[
+fastapi_healthcheck.add_health_route(app, name="Super-Resolution", checkers=[
     healthcheck.redis.Checker(),  #built-in checker
     WorkerChecker(name="Worker Checker") #custom checker
 ])
