@@ -6,10 +6,9 @@ def add_health_route(app, name="Application Name", checkers=[], version=1.0):
         for checker in checkers: 
             checks.append(await checker.check())
 
-        status = True 
-        
+        status = True                 
         for check in checks: 
-            if not check['status']:
+            if not check['optional'] and check['status'] is False:
                 status = False 
         return {"name": name, "status": status, "version": version, "checks": checks}
 
