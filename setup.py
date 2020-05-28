@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="fastapi-healthcheck-flagman",
-    version="0.0.7",
+    version="0.0.8",
     author="Pavel Malay",
     author_email="flagmansupport@gmail.com",
     description="A small healthcheck package for adding /healthcheck routes to FastAPI projects",
